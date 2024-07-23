@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi primer Ejemplo</title>
+  </head>
+  <body>
+    <header>
+      <img
+        src="https://dlegaonline.es/wp-content/uploads/que-no-debe-faltar-en-la-cabecera-de-web-800x450-2.jpg"
+        alt=""
+      />
+    </header>
+    <h1>Ejemplo 2: elementos de formato</h1>
+    <p>
+      Muestra un texto en <b>negrita</b>, <em>cursiva</em> y <u>subrayado</u>.
+    </p>
+    <blockquote>
+      Un ejemplo de nota, al cual se le añade un sangrado o margen por la
+      izquierda.
+    </blockquote>
+    <hr />
+    <h2>Otro encabezado</h2>
+    <p>
+      Ejemplo con superíndices (E=mc<sup>2</sup>) y subíndices (CO<sub>2</sub>).
+    </p>
+
+    <h2>Ejemplo de lista desordenada: Tareas pendientes</h2>
+    <ul>
+      <li>Hacer la compra</li>
+      <li>Ordenar papeles</li>
+      <li>Contestar correos</li>
+    </ul>
+
+    <h2>Ejemplo de lista ordenada: Prioridades</h2>
+    <ol>
+      <li>Contestar correos</li>
+      <li>Hacer la compra</li>
+      <li>Ordenar papeles</li>
+    </ol>
+
+    <h2>Ejemplo de lista de descrición: Detalles</h2>
+    <dl>
+      <dt>Contestar correos</dt>
+      <dd>Importante el correo pendiente al tutor</dd>
+      <dt>Hacer la compra</dt>
+      <dd>No queda leche, huevos y pan</dd>
+      <dt>Ordenar papeles</dt>
+      <dd>Los apuntes de Lenguaje de marcas</dd>
+    </dl>
+    <table border="1">
+      <thead>
+        <th>Plato</th>
+        <th>Opciones</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Primero</td>
+          <td>
+            <ol>
+              <li>Ensalada</li>
+              <li>Lentejas</li>
+              <li>Macarrones</li>
+            </ol>
+          </td>
+        </tr>
+        <tr>
+          <td>Segundo</td>
+          <td>
+            <ol>
+              <li>Pescado</li>
+              <li>Pollo</li>
+              <li>Arroz</li>
+            </ol>
+          </td>
+        </tr>
+        <tr>
+          <td>Postre</td>
+          <td>
+            <ol>
+              <li>Yogur</li>
+              <li>Fruta</li>
+            </ol>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <form action="">
+      <h1>Ejemplo de utilización de formulario sencillo</h1>
+      <label><b>Introducción de contraseña</b></label> <br />
+      <br />
+      <label for="">Nombre:</label> <input type="text" /><br />
+      <br />
+      <label for="">Contraseña:</label>
+      <input type="text" name="" id="" /><br /><br />
+      <button>Limpiar</button> <br /><br />
+      <button>Enviar</button> <br /><br />
+    </form>
+
+    <form action="">
+      <h1>Formulario con diferentes tipos de campos</h1>
+      <label for="">Nombre</label> <input type="text" /><br /><br />
+      <label for="">Apellidos</label> <input type="text" /><br /><br />
+      <label for="">Fecha de nacimiento</label>
+      <input type="date" name="" id="" /><br /><br />
+      <label for="">e-mail</label><input type="text" /><br /><br />
+      <label for="">contraseña</label> <input type="text" name="" id="" />
+      <br /><br />
+
+      <label for="">Desplegable</label>
+      <select name="Opcion1" id="">
+        <option value="Opcion1">Opcion 1</option>
+        <option value="Opcion1">Opcion 2</option></select
+      ><br /><br />
+
+      <span>
+        <label for="">Sexo</label> <br />
+        <input type="radio" name="sexo" id="" />
+        <label for="">Hombre</label><br />
+        <input type="radio" name="sexo" id="" />
+        <label for="">Mujer</label> <br />
+      </span>
+      <span>
+        <label for="">Profesión</label> <br />
+        <input type="radio" name="profesion" id="" />
+        <label for="">Profesor</label> <br />
+        <input type="radio" name="profesion" id="" />
+        <label for="">Programador </label><br />
+        <input type="radio" name="profesion" id="" />
+        <label for="">Diseñador gráfico</label><br />
+      </span>
+
+      <span>
+        <label for="">Aficciones </label><br />
+        <input type="checkbox" name="Aficciones" id=" " />
+        <label for="">Ciencia</label><br />
+        <input type="checkbox" name="Aficciones" id=" " />
+        <label for="">Libros</label><br />
+        <input type="checkbox" name="Aficciones" id=" " />
+        <label for="">Deportes</label>
+      </span>
+      <br /><br />
+      <label for="">Indique sus comentarios:</label><br /><br />
+      <textarea name="" id="" placeholder="Comentario:"></textarea>
+      <br />
+      <button>Enviar</button> <button>Limpiar todo</button>
+    </form>
+
+    <h1>Ejemplo de tabla</h1>
+    <table border="1">
+      <colgroup span="2" style="background-color: aquamarine"></colgroup>
+      <colgroup
+        span="1"
+        style="background-color: rgb(192, 252, 232)"
+      ></colgroup>
+      <thead style="background-color: rgb(6, 253, 171)">
+        <th>Cabecera</th>
+        <th>Cabecera 2</th>
+        <th>Cabecera 3</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Fila 1.1</td>
+          <td>Fila 1.2</td>
+          <td rowspan="2">Fila 1.3</td>
+        </tr>
+
+        <tr>
+          <td>Fila 2.1</td>
+          <td>Fila 2.2</td>
+        </tr>
+        <tr>
+          <td>Fila 3.1</td>
+          <td>Fila 3.2</td>
+          <td>Fila 3.3</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2">Resultado final</td>
+          <td>Final</td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>
