@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mail>
+    <destinatario>
+        <nombre>Nombre del destinatario</nombre>
+        <mail> correodestinatario@correo.com</mail>
+    </destinatario>
+    <remitente>
+        <nombre>Nombre del remitente</nombre>
+        <mail>correoremitente@correo.com</mail>
+    </remitente>
+    <Asunto>Asunto del correo</Asunto>
+    <texto>
+        <parrafo>Primer parrafo</parrafo>
+        <parrafo>Segundo parrafo</parrafo>
+    </texto>
+</mail>

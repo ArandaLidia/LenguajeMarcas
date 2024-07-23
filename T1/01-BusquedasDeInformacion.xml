@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Cuerpo -->
+<pedido>
+    <destinatario tratamiento="Sr.">
+        <nombre>Pedro</nombre>
+        <apellidos>Martín Martínez</apellidos>
+    </destinatario>
+    
+    <articulo>
+        <nombre>Tablet</nombre>
+        <marca>Samsung</marca>
+        <modelo>Galaxy Tab A8</modelo>
+    </articulo>
+    
+    <direccion>
+        <calle>Virgen de la cruz</calle>
+        <numero>2</numero>
+        <piso>7</piso>
+        <letra>A</letra>
+    </direccion>
+    
+    <localidad>
+        
+    </localidad>
+    
+    <fechaEntrega>
+        <dia>17</dia>
+        <mes>10</mes>
+        <anio>2022</anio>
+    </fechaEntrega>
+</pedido>
