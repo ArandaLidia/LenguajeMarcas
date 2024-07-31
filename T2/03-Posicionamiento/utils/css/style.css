@@ -1,0 +1,29 @@
+nav ul {
+    display: inline;
+    background-color: aqua;
+    float: right;
+  }
+  li {
+    display: inline;
+  }
+  h1 {
+    text-align: center;
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  main {
+    width: 70%;
+    background-color: rgb(235, 112, 30);
+  }
+  aside {
+    width: 30%;
+    background-color: lightgrey;
+  }
+  footer {
+    clear: both;
+    background-color: darkgray;
+    padding: 10px;
+  }
+  
