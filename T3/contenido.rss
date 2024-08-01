@@ -1,0 +1,37 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<rss version="2.0">
+<chanel>
+    <title>Contendos de la asignatura LMySGE</title>
+<link>https://www.ue.com/lm</link>
+<description>Este rss se utiliza para mostrar todas las noticias que se publican en la asignatura</description>
+    <item>
+        <title>Tema 1: Introduccion</title>
+        <description>La noticia del tema 1 es como poder crear y entender como funciona un fichero XML</description>
+        <link>gttp://ut.com/lm/tema1/n1</link>
+        <guid>1</guid>
+    </item>
+    <item>
+        <title>Tema 1: XML</title>
+        <description>La noticia del tema 1 es como poder crear un fichero XML y poder formatearlo de forma adecuada</description>
+        <link>gttp://ut.com/lm/tema1/n2</link>
+        <guid>2</guid>
+    </item>
+</chanel>
+<chanel>
+    <title>Contendos de la asignatura Programación</title>
+<link>https://www.ue.com/pro</link>
+<description>Este rss se utiliza para mostrar todas las noticias que se publican en la asignatura</description>
+    <item>
+        <title>Tema 1: Introduccion</title>
+        <description>La noticia del tema 1 es como poder crear y entender como funciona un fichero .JAVA</description>
+        <link>gttp://ut.com/pro/tema1/n1</link>
+        <guid>1</guid>
+    </item>
+    <item>
+        <title>Tema 1: XML</title>
+        <description>La noticia del tema 1 es como poder crear un ¡Hola, Mundo!</description>
+        <link>gttp://ut.com/pro/tema1/n2</link>
+        <guid>2</guid>
+    </item>
+</chanel>
+</rss>
