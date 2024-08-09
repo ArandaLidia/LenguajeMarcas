@@ -54,3 +54,45 @@ botonBuscar.addEventListener("click", () => {
         listaBuscar.innerHTML += `<li class='list-group-item mt-2 animate__animated animate__zoomInUp'>${item}</li>`
     })
 })
+
+// agrega
+//listaUsuariosDatos.push("Borja", "Maria", "Juan", "Maria", "Luis");
+//listaUsuariosDatos.unshift("Jose"); // [u0,u1,u2,u3,u4]
+
+// eliminar
+//listaUsuariosDatos.pop();
+//listaUsuariosDatos.shift(); //[u1,u2,u3]
+
+// busquedas
+/* listaUsuariosDatos.forEach((item, index) => {
+  // ejecutar una vez por cada elemento del array
+  console.log(`${index} ${item}`);
+}); */
+
+// de un elemento -> find
+
+/* let usuarioBuscado = listaUsuariosDatos.find((item) => {
+  return item == "Jose";
+});
+
+if (usuarioBuscado != null) {
+  console.log(usuarioBuscado);
+} else {
+  console.log("El usaurio no esta en la lista");
+} */
+
+// de elementos -> filter
+
+/*   let nombreBuscar = prompt("Introduce el nombre que quieres buscar");
+
+let listaResultante = listaUsuariosDatos.filter((item) => {
+  return item == nombreBuscar;
+});
+
+if (listaResultante.length > 0) {
+  listaResultante.forEach((item) => {
+    console.log(item);
+  });
+} else {
+  console.log("No hay elementos con la letra indicada");
+} */
