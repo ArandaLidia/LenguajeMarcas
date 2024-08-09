@@ -24,20 +24,37 @@
   <body>
     <main class="container m-4">
       <h1>Gestor de usuarios</h1>
-      <input
-        id="input-nombre"
-        class="form-control mt-3"
-        type="text"
-        placeholder="Introduce nombre"
-      />
-      <input
-        id="input-apellido"
-        class="form-control mt-3"
-        type="text"
-        placeholder="Introduce apellido"
-      />
-      <button id="boton-agregar" class="btn btn-primary mt-3">Agregar</button>
-      <ul id="lista-usuarios" class="list-group"></ul>
+      <div class="row">
+        <div class="col">
+          <input
+            id="input-nombre"
+            class="form-control mt-3"
+            type="text"
+            placeholder="Introduce nombre"
+          />
+          <input
+            id="input-apellido"
+            class="form-control mt-3"
+            type="text"
+            placeholder="Introduce apellido"
+          />
+          <button id="boton-agregar" class="btn btn-primary mt-3">
+            Agregar
+          </button>
+          <ul id="lista-usuarios" class="list-group"></ul>
+        </div>
+        <div class="col">
+          <h2>Buscador</h2>
+          <input
+            id="input-buscar"
+            class="form-control mt-3"
+            type="text"
+            placeholder="Introduce nombre a buscar"
+          />
+          <button class="btn btn-primary mt-3" id="boton-buscar">Buscar</button>
+          <ul id="lista-busqueda"></ul>
+        </div>
+      </div>
     </main>
     <script src="/utils/gestor.js"></script>
   </body>
