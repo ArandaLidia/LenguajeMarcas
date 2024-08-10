@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Repaso de JS</title>
+  </head>
+  <body>
+    <main>
+      <h1>Repaso de JS y HTML</h1>
+      <p>
+        Esta página nos valdrá para poder ver duales son las cosas más
+        importantes de JS y su asociación con HTML
+        <!-- <script>
+          console.log("Ejecución completada de JS");
+          let boton = document.querySelector("#botonIniciar");
+          console.log(boton);
+        </script> -->
+        <!-- Botón no accesible desde JS -->
+        <!-- atributo a funcion onclick="pulsacion()" -->
+        <!-- <button id="botonIniciar">Pulsar para empezar</button -->
+        <!-- Para que el botón sea accesible, el script tiene que estar al final y todos los elementos encima. -->
+      </p>
+      <input
+        type="text"
+        placeholder="Introduce el nombre de la persona que quieres saludar"
+        id="input-nombre"
+      />
+      <select name="" id="select-opciones">
+        <option value="">Opcion 1</option>
+        <option value="">Opcion 2</option>
+        <option value="">Opcion 3</option>
+        <option value="">Opcion 4</option>
+      </select>
+      <button id="botonIniciar">Pulsar para empezar</button>
+      <p id="parrafo-saludo"></p>
+    </main>
+    <section>
+      <ul id="lista-saludo">
+        Personas que han saludado
+      </ul>
+    </section>
+
+    <script src="/utils/gestion.js"></script>
+  </body>
+</html>
