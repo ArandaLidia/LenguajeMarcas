@@ -8,13 +8,15 @@ class Producto {
     precio;
     marca;
     categoria;
+    imagen;
 
     //Constructor
-    constructor(nombre, precio, marca, categoria) {
+    constructor(nombre, precio, marca, categoria, imagen) {
         this.marca = marca
         this.categoria = categoria
         this.nombre = nombre
         this.precio = precio
+        this.imagen = imagen
     }
 
     //Metodos
@@ -30,5 +32,9 @@ class Producto {
     }
     set setNombre(nombre) {
         return this.nombre = nombre;
+    }
+
+    get getImagen() {
+        return this.imagen
     }
 }
