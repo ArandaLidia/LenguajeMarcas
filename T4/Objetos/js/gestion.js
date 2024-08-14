@@ -63,8 +63,8 @@ let seleccionCartas = document.querySelector("#seccion-cartas");
 
 /*Lista de los elementos que cumplen la condicion de busqueda */
 //productos.find (devuelve el primer elemento que cumple con la condición de busqueda)
-let busquedaRopa = productos.filter((Element) => {
+/* let busquedaRopa = productos.filter((Element) => {
   return Element.categoria == "ropa"
 })
 
-console.log(busquedaRopa)
+console.log(busquedaRopa) */

@@ -33,8 +33,4 @@ class Producto {
     set setNombre(nombre) {
         return this.nombre = nombre;
     }
-
-    get getImagen() {
-        return this.imagen
-    }
 }
