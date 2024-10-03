@@ -1,6 +1,7 @@
 // Se declaran las variables que representan los campos del formulario que vamos a necesitar
 let inputNombre = document.querySelector("input#input-nombre"); // Input para el nombre
 let inputApellido = document.querySelector("input#input-apellido"); // Input para el apellido
+let inputmail = document.querySelector("#input-email")
 let selectDepartamento = document.querySelector("#select-departamento"); // Select para el departamento
 let boton = document.querySelector("#boton-agregar"); // Botón para agregar trabajador
 
@@ -70,6 +71,7 @@ boton.addEventListener("click", () => {
         // Limpiamos los campos del formulario después de agregar el trabajador
         inputNombre.value = "";
         inputApellido.value = "";
+        inputmail.value = "";
         selectDepartamento.value = ""; // Reiniciamos el select a su valor por defecto
 
         // Mostrar alerta con SweetAlert
