@@ -1,0 +1,217 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : 22 nov 2023, 12:42:48
+    Author     : lidia
+*/
+* { /* El selector *{ }Selecciona todos los elementos de la página.*/
+    margin: 0; /*margin: 0; y padding: 0; eliminan el espacio exterior (margen) e interior (relleno) predeterminado que tienen los elementos en la mayoría de los navegadores*/
+    padding: 0;/*Establecer estos valores en 0 asegura que no haya espacio adicional alrededor de los elementos.*/
+    box-sizing: border-box;/*border-box; es una regla que establece el modelo de caja para todos los elementos en la página. border-box asegura que el ancho y alto especificados en width y height incluyan el relleno y el borde del elemento, en lugar de agregarlos al ancho y alto.*/
+}
+
+body {
+    font-family: 'open sans';/*font-family establece la tipografía que se utilizará para el texto en el cuerpo (body) de la página. En este caso, 'open sans' sería el nombre de la fuente que se aplicará. Se utiliza 'open sans' como ejemplo de fuente; normalmente se proporcionaría el nombre real de la fuente que se desea utilizar.*/
+}
+
+.contenedor {
+    padding: 60px 0;/*padding: 60px 0; establece un relleno superior e inferior de 60 píxeles, y no hay relleno en los lados izquierdo y derecho (0).*/
+    width: 90%;/*width: 90%; establece el ancho del elemento al 90% del ancho del contenedor principal.*/
+    max-width: 1000px;/*max-width: 1000px; establece un ancho máximo de 1000 píxeles para el elemento.*/
+    margin: auto;/*margin: auto; centra horizontalmente el elemento dentro de su contenedor principal.*/
+    overflow: hidden;/*overflow: hidden; oculta cualquier contenido que se desborde del contenedor.*/
+}
+
+.titulo {
+    color: #642a73;/*color: #740707; establece el color del texto del título.*/
+    font-size: 30px;/*font-size: 30px; establece el tamaño de la fuente del título en 30 píxeles.*/
+    text-align: center;/*ext-align: center; centra el texto del título horizontalmente dentro de su contenedor.*/
+    margin-bottom: 60px;/*margin-bottom: 60px; se usa para agregar un espacio (margen) de 60 píxeles en la parte inferior de un elemento.*/
+}
+
+/* Header */
+
+header {
+    width: 100%; /* Ancho del encabezado al 100% del contenedor padre. */
+    height: 600px; /* Altura del encabezado de 600 píxeles. */
+    background: #bc4e9c; /* Fondo del encabezado con un color sólido #bc4e9c. */
+    /* Se definen gradientes y una imagen de fondo para el encabezado */
+    /* Aquí hay una declaración de fondo con gradientes y una imagen. Se usa un gradiente y una imagen de fondo como respaldo para navegadores más antiguos y versiones específicas de navegadores. */
+    /* Estos son gradientes lineales superpuestos con una imagen de fondo. */
+    /* Los prefijos -webkit- son específicos para Chrome y Safari antiguos. */
+    background: -webkit-linear-gradient(to right, hsl(210, 29%, 24%, 0.65), hsl(188.485, 39%, 49%, 0.65)), url(portada.jpg);
+    /* La propiedad background sin prefijos es para navegadores modernos que siguen los estándares. */
+    background: linear-gradient(to right, hsl(210, 29%, 24%, 0.65), hsl(188.485, 39%, 49%, 0.65)), url(portada.jpg);
+    /* Se establece la forma en que se muestra la imagen de fondo */
+    background-size: cover; /* Cover, para que la imagen de fondo se ajuste para cubrir todo el contenedor. */
+    background-attachment: fixed; /* La imagen de fondo permanece fija mientras se desplaza el contenido. */
+    position: relative; /* Establece la posición del encabezado como relativa con respecto a su contenedor padre. */
+
+}
+
+/* Estilos para la navegación (nav) */
+nav {
+    text-align: right; /* Alinea el texto de la navegación a la derecha. */
+    padding: 30px 50px 0 0; /* Establece el relleno (padding) del borde superior de 30px, borde derecho de 50px, sin borde inferior y sin borde izquierdo. */
+}
+
+nav > a {
+    color: #fff; /* Color del texto de los enlaces de navegación en blanco. */
+    font-weight: 300; /* Peso de la fuente de los enlaces de navegación a 300 (normal). */
+    text-decoration: none; /* Quita el subrayado de los enlaces de navegación. */
+    margin-right: 10px; /* Agrega un margen a la derecha de 10px a los enlaces de navegación. */
+}
+
+nav > a:hover {
+    text-decoration: underline; /* Subraya los enlaces de navegación al pasar el mouse sobre ellos. */
+}
+
+/* Estilos para los textos dentro del encabezado */
+header .textos-header {
+    display: flex; /* Usa el modelo de caja flex para los elementos hijos. */
+    height: 430px; /* Altura de los textos dentro del encabezado de 430 píxeles. */
+    width: 100%; /* Ancho de los textos al 100% del contenedor. */
+    align-items: center; /* Alinea los elementos hijos verticalmente al centro. */
+    justify-content: center; /* Centra los elementos hijos horizontalmente. */
+    flex-direction: column; /* Establece la disposición de los elementos hijos en columna. */
+    text-align: center; /* Alinea el texto al centro dentro del contenedor. */
+}
+
+.textos-header h1 {
+    font-size: 50px; /* Tamaño de la fuente del elemento h1 a 50px. */
+    color: #fff; /* Color del texto del elemento h1 en blanco. */
+}
+
+.textos-header h2 {
+    font-size: 30px; /* Tamaño de la fuente del elemento h2 a 30px. */
+    font-weight: 300; /* Peso de la fuente del elemento h2 a 300 (normal). */
+    color: #fff; /* Color del texto del elemento h2 en blanco. */
+}
+
+/* Estilos para la onda (wave) */
+.wave {
+    position: absolute; /* Establece la posición absoluta del elemento con clase 'wave'. */
+    bottom: 0; /* Alinea el elemento 'wave' al borde inferior del contenedor padre. */
+    width: 100%; /* Ancho del elemento 'wave' al 100% del contenedor padre. */
+}
+/* Estilos para el contenedor de datos personales */
+.contenedor-datos-personales {
+    display: flex; /* Usa el modelo flexbox para el contenedor */
+    justify-content: space-evenly; /* Distribuye el espacio entre elementos */
+}
+
+/* Estilos para la imagen de datos personales */
+.imagen-datos-personales {
+    width: 48%; /* Ancho del 48% del contenedor padre */
+}
+
+/* Estilos para el contenido de texto de datos personales */
+.datos-personales .contenido-textos {
+    width: 48%; /* Ancho del 48% del contenedor padre */
+}
+
+.contenedor-datos-academicos {
+    display: flex; /* Usa el modelo flexbox para el contenedor */
+    justify-content: space-evenly; /* Distribuye el espacio entre elementos */
+}
+
+/* Estilos para la imagen de datos personales */
+.imagen-datos-academicos {
+    width: 48%; /* Ancho del 48% del contenedor padre */
+}
+
+/* Estilos para el contenido de texto de datos personales */
+.datos-academicos .contenido-academico {
+    width: 48%; /* Ancho del 48% del contenedor padre */
+}
+
+/* Estilos para el contenedor de datos profesionales */
+.contenedor-datos-profesionales {
+    display: flex; /* Usa el modelo flexbox para el contenedor */
+    justify-content: space-evenly; /* Distribuye el espacio entre elementos */
+}
+
+/* Estilos para la imagen de datos profesionales */
+.imagen-datos-profesionales {
+    width: 48%; /* Ancho del 48% del contenedor padre */
+}
+
+/* Estilos para el contenido profesional */
+.datos-profesionales .contenido-profesional {
+    width: 20%; /* Ancho del 20% del contenedor padre */
+}
+
+/* Estilos para el contenedor de datos de contacto */
+.contenedor-datos-contacto {
+    display: flex; /* Usa el modelo flexbox para el contenedor */
+    justify-content: space-evenly; /* Distribuye el espacio entre elementos */
+}
+
+/* Estilos para la imagen de datos de contacto */
+.imagen-datos-contacto {
+    width: 48%; /* Ancho del 48% del contenedor padre */
+}
+
+/* Estilos para el contenido de contacto */
+.datos-contacto .contenido-contacto {
+    width: 20%; /* Ancho del 20% del contenedor padre */
+}
+
+/* Estilos para el contenedor del formulario */
+.contenedor-enviar-formulario {
+    display: flex; /* Usa el modelo flexbox para el contenedor */
+    justify-content: center; /* Centra horizontalmente el contenido */
+}
+
+/* Estilos para la leyenda del formulario */
+legend {
+    font-weight: bold; /* Peso de la fuente */
+    margin-bottom: 10px; /* Margen inferior */
+}
+
+/* Estilos para los campos de entrada y selección en el formulario */
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="textarea"],
+select {
+    width: calc(100% - 110px); /* Ajusta el ancho del input y select */
+    padding: 8px; /* Relleno del campo de entrada y selección */
+    border: 1px solid #ddd; /* Borde del campo */
+    border-radius: 4px; /* Borde redondeado */
+    margin-right: 10px; /* Margen a la derecha para separar del botón */
+}
+/* Estilos para los botones genéricos */
+button {
+    padding: 8px 15px; /* Espaciado interno del botón */
+    border: none; /* Quita el borde del botón */
+    background-color: #AD1919; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    border-radius: 4px; /* Borde redondeado del botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+/* Estilos para el botón cuando se pasa el cursor sobre él */
+button:hover {
+    background-color: #740707; /* Cambia el color de fondo al pasar el cursor */
+}
+
+/* Estilos para los inputs de tipo "submit" y "reset" */
+input[type="submit"],
+input[type="reset"] {
+    padding: 10px 20px; /* Espaciado interno del input */
+    border: none; /* Quita el borde del input */
+    border-radius: 4px; /* Borde redondeado del input */
+    background-color: #4CA1AF; /* Color de fondo del input */
+    color: #fff; /* Color del texto del input */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el input */
+    transition: background-color 0.3s ease; /* Efecto de transición suave */
+}
+
+/* Estilos para los inputs de tipo "submit" y "reset" cuando se pasa el cursor sobre ellos */
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: #2C3E50; /* Cambia el color de fondo al pasar el cursor */
+} /* Cambia el color al pasar el cursor sobre el botón */

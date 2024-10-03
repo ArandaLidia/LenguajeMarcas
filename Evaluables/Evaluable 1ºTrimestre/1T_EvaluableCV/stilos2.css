@@ -1,0 +1,53 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : 24 nov 2023, 23:29:58
+    Author     : lidia
+*/
+* { /* El selector *{ }Selecciona todos los elementos de la página.*/
+    margin: 10px; /*margin: 0; y padding: 0; eliminan el espacio exterior (margen) e interior (relleno) predeterminado que tienen los elementos en la mayoría de los navegadores*/
+    padding: 10px;/*Establecer estos valores en 0 asegura que no haya espacio adicional alrededor de los elementos.*/
+    box-sizing: border-box;/*border-box; es una regla que establece el modelo de caja para todos los elementos en la página. border-box asegura que el ancho y alto especificados en width y height incluyan el relleno y el borde del elemento, en lugar de agregarlos al ancho y alto.*/
+}
+
+.caja {
+    font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif; /* Fuente */
+    color: #ffffff; /* Color de texto */
+    font-size: 18px; /* Tamaño de la fuente */
+    font-weight: 400; /* Grosor de la fuente */
+    text-align: center; /* Alineación del texto */
+    background: #4CA1AF; /* Color de fondo */
+    margin: 0 0 0px; /* Márgenes (arriba, derecha/izquierda, abajo) */
+    overflow: hidden; /* Manejo de desbordamiento de contenido */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 35px 0px 35px 0px; /* Radio de borde (superior izquierdo, superior derecho, inferior derecho, inferior izquierdo) */
+    -moz-border-radius: 35px 0px 35px 0px; /* Propiedad de radio de borde para Firefox */
+    -webkit-border-radius: 35px 0px 35px 0px; /* Propiedad de radio de borde para Webkit (Chrome/Safari) */
+    border: 2px solid #2C3E50; /* Borde */
+}
+body {
+  height: 800px; /* Altura del cuerpo */
+  background-image: url(imgfondo.jpg); /* Imagen de fondo */
+  background-size: cover; /* Tamaño de la imagen de fondo (cubre todo el cuerpo) */
+  background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+  background-position: center center; /* Posición de la imagen de fondo en el centro */
+}
+body {
+    width: 100%; /* Ancho del encabezado al 100% del contenedor padre. */
+    height: 600px; /* Altura del encabezado de 600 píxeles. */
+    background: #bc4e9c; /* Fondo del encabezado con un color sólido #bc4e9c. */
+    /* Se definen gradientes y una imagen de fondo para el encabezado */
+    /* Aquí hay una declaración de fondo con gradientes y una imagen. Se usa un gradiente y una imagen de fondo como respaldo para navegadores más antiguos y versiones específicas de navegadores. */
+    /* Estos son gradientes lineales superpuestos con una imagen de fondo. */
+    /* Los prefijos -webkit- son específicos para Chrome y Safari antiguos. */
+    background: -webkit-linear-gradient(to right, hsl(210, 29%, 24%, 0.65), hsl(188.485, 39%, 49%, 0.65)), url(img1.jpg);
+    /* La propiedad background sin prefijos es para navegadores modernos que siguen los estándares. */
+    background: linear-gradient(to right, hsl(210, 29%, 24%, 0.65), hsl(188.485, 39%, 49%, 0.65)), url(img1.jpg);
+    /* Se establece la forma en que se muestra la imagen de fondo */
+    background-size: cover; /* Cover, para que la imagen de fondo se ajuste para cubrir todo el contenedor. */
+    background-attachment: fixed; /* La imagen de fondo permanece fija mientras se desplaza el contenido. */
+    position: relative; /* Establece la posición del encabezado como relativa con respecto a su contenedor padre. */
+
+}

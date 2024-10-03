@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Configuración del documento -->
+    <meta charset="UTF-8"> <!-- Codificación del documento -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configuración de la vista en dispositivos móviles -->
+    <title>Formulario de Registro</title> <!-- Título de la página -->
+
+    <!-- Estilos CSS -->
+    <style>
+        /* Estilos para el cuerpo de la página */
+        body {
+            font-family: Arial, sans-serif;
+            /* Familia de fuentes */
+            display: flex;
+            /* Contenedor principal con flexbox */
+            justify-content: center;
+            /* Centra horizontalmente */
+            align-items: center;
+            /* Centra verticalmente */
+            height: 100vh;
+            /* Altura del cuerpo de la página al 100% del viewport */
+            margin: 0;
+            /* Elimina el margen por defecto */
+        }
+
+        /* Contenedor principal */
+        .container {
+            max-width: 350px;
+            /* Ancho máximo del contenedor */
+            width: 100%;
+            /* Ancho del contenedor al 100% del viewport */
+            text-align: left;
+            /* Alineación del texto a la izquierda */
+        }
+
+        /* Contenedor del formulario */
+        .form-container {
+            border-radius: 5px;
+            /* Borde redondeado */
+            padding: 20px;
+            /* Espaciado interno */
+            margin-bottom: 20px;
+            /* Margen inferior */
+        }
+
+        /* Estilos para los campos de entrada */
+        input {
+            width: calc(90% - 10px);
+            /* Ancho del campo de entrada */
+            padding: 10px;
+            /* Espaciado interno */
+            margin-bottom: 0px;
+            /* Margen inferior */
+            box-sizing: border-box;
+            /* Incluye el borde y el padding en el ancho */
+        }
+
+        /* Estilos para el botón de enviar */
+        input[type="submit"] {
+            background-color: #007bff;
+            /* Color de fondo */
+            color: #fff;
+            /* Color del texto */
+            border: none;
+            /* Sin borde */
+            cursor: pointer;
+            /* Cursor apuntador */
+            margin-top: 10px;
+            /* Margen superior */
+        }
+
+        /* Estilos para el botón de mostrar/ocultar contraseña */
+        input[type="button"] {
+            background-color: #007bff;
+            /* Color de fondo */
+            color: #fff;
+            /* Color del texto */
+            border: none;
+            /* Sin borde */
+            cursor: pointer;
+            /* Cursor apuntador */
+            margin-top: 0px;
+            /* Margen superior */
+        }
+
+        /* Estilos para las teclas del teclado virtual */
+        .tecla {
+            background-color: #007bff;
+            /* Color de fondo */
+            color: #fff;
+            /* Color del texto */
+            border: none;
+            /* Sin borde */
+            cursor: pointer;
+            /* Cursor apuntador */
+            margin-top: 10px;
+            /* Margen superior */
+            width: 25px;
+            /* Ancho */
+            height: 30px;
+            /* Altura */
+        }
+
+        /* Pseudoclase hover para el botón de enviar */
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+            /* Cambio de color de fondo al pasar el mouse */
+        }
+
+        /* Mensaje de bienvenida */
+        #welcome-message {
+            display: none;
+            /* Ocultar por defecto */
+            font-size: 18px;
+            /* Tamaño de fuente */
+            margin-top: 20px;
+            /* Margen superior */
+        }
+
+        /* Estilos para el botón de mostrar/ocultar contraseña cuando se confirma */
+        .mostrar {
+            margin-top: 15px;
+            /* Margen superior */
+        }
+
+        /* Estilos para el campo de contraseña */
+        .contraseña {
+            margin-bottom: 10px;
+            /* Margen inferior */
+        }
+
+        /* Estilos para el campo de nombre de usuario */
+        .name {
+            margin-bottom: 10px;
+            /* Margen inferior */
+        }
+
+        /* Estilos para el campo de correo electrónico */
+        .email {
+            margin-bottom: 10px;
+            /* Margen inferior */
+        }
+
+        /* Estilos para los mensajes de error */
+        .error-message {
+            font-size: 12px;
+            /* Tamaño de fuente */
+            color: red;
+            /* Color rojo */
+            margin-top: 5px;
+            /* Margen superior */
+        }
+        .success{
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Contenedor principal -->
+    <div class="container">
+        <!-- Encabezado -->
+        <div class="header">
+            <h2>Formulario de Registro</h2> <!-- Título del formulario -->
+        </div>
+
+        <!-- Contenedor del formulario -->
+        <div class="form-container">
+            <!-- Formulario de registro -->
+            <form id="registration-form">
+                <!-- Campos de entrada -->
+                <input type="text" class="name" id="name" placeholder="Nombre de usuario" onfocus="handleFocus('name')">
+                <div id="name-error" class="error-message"></div>
+                <input type="email" class="email" id="email" placeholder="Correo electrónico"
+                    onfocus="handleFocus('email')">
+                <div id="email-error" class="error-message"></div>
+                <input type="password" class="contraseña" id="password" placeholder="Contraseña"
+                    onfocus="handleFocus('password')">
+                <div id="password-error" class="error-message"></div>
+                <input type="button" class="mostrar" value="Mostrar" onclick="togglePasswordVisibility()">
+                <input type="password" class="contraseña" id="confirmarContraseña" placeholder="Confirmar contraseña"
+                    onfocus="handleFocus('confirmarContraseña')">
+                <div id="confirmarContraseña-error" class="error-message"></div>
+                <input type="submit" value="Registrarse" onclick="return validateForm()"> <!-- Botón de enviar -->
+            </form>
+            <div class="success" id="success-message" style="display: none; color: green;">¡Te has registrado correctamente!</div>
+
+            <!-- Teclado virtual -->
+            <div class="contenedor-teclado">
+                <!-- Botones del teclado virtual -->
+                <button class="tecla" onclick="addCharacter('1')">1</button>
+                <button class="tecla" onclick="addCharacter('2')">2</button>
+                <button class="tecla" onclick="addCharacter('3')">3</button>
+                <button class="tecla" onclick="addCharacter('4')">4</button>
+                <button class="tecla" onclick="addCharacter('5')">5</button>
+                <button class="tecla" onclick="addCharacter('6')">6</button>
+                <button class="tecla" onclick="addCharacter('7')">7</button>
+                <button class="tecla" onclick="addCharacter('8')">8</button>
+                <button class="tecla" onclick="addCharacter('9')">9</button>
+                <button class="tecla" onclick="addCharacter('0')">0</button>
+                <button class="tecla" onclick="addCharacter('Q')">Q</button>
+                <button class="tecla" onclick="addCharacter('W')">W</button>
+                <button class="tecla" onclick="addCharacter('E')">E</button>
+                <button class="tecla" onclick="addCharacter('R')">R</button>
+                <button class="tecla" onclick="addCharacter('T')">T</button>
+                <button class="tecla" onclick="addCharacter('Y')">Y</button>
+                <button class="tecla" onclick="addCharacter('U')">U</button>
+                <button class="tecla" onclick="addCharacter('I')">I</button>
+                <button class="tecla" onclick="addCharacter('O')">O</button>
+                <button class="tecla" onclick="addCharacter('P')">P</button>
+                <button class="tecla" onclick="addCharacter('A')">A</button>
+                <button class="tecla" onclick="addCharacter('S')">S</button>
+                <button class="tecla" onclick="addCharacter('D')">D</button>
+                <button class="tecla" onclick="addCharacter('F')">F</button>
+                <button class="tecla" onclick="addCharacter('G')">G</button>
+                <button class="tecla" onclick="addCharacter('H')">H</button>
+                <button class="tecla" onclick="addCharacter('J')">J</button>
+                <button class="tecla" onclick="addCharacter('K')">K</button>
+                <button class="tecla" onclick="addCharacter('L')">L</button>
+                <button class="tecla" onclick="addCharacter('Ñ')">Ñ</button>
+                <button class="tecla" onclick="addCharacter('Z')">Z</button>
+                <button class="tecla" onclick="addCharacter('X')">X</button>
+                <button class="tecla" onclick="addCharacter('C')">C</button>
+                <button class="tecla" onclick="addCharacter('V')">V</button>
+                <button class="tecla" onclick="addCharacter('B')">B</button>
+                <button class="tecla" onclick="addCharacter('N')">N</button>
+                <button class="tecla" onclick="addCharacter('M')">M</button>
+                <button class="tecla" onclick="addCharacter('.')">.</button>
+                <button class="tecla" onclick="addCharacter('_')">_</button>
+                <button class="tecla" onclick="addCharacter('-')">-</button>
+                <button class="tecla" onclick="addCharacter('borrarCaracter')">&larr;</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Declaración de variables
+        let lastActiveFieldId = null;
+
+        // Función para manejar el foco en los campos de entrada
+        function handleFocus(fieldId) {
+            lastActiveFieldId = fieldId;
+        }
+
+        // Función para mostrar u ocultar la contraseña
+        function togglePasswordVisibility() {
+            // Obtiene los campos de contraseña
+            const passwordInput = document.getElementById('password');
+            const confirmPasswordInput = document.getElementById('confirmarContraseña');
+            // Cambia el tipo de los campos de contraseña y el texto del botón
+            if (passwordInput.type === 'password' && confirmPasswordInput.type === 'password') {
+                passwordInput.type = 'text'; // Muestra la contraseña
+                confirmPasswordInput.type = 'text'; // Muestra la confirmación de contraseña
+                document.querySelector('.mostrar').value = 'Ocultar'; // Cambia el texto del botón
+            } else {
+                passwordInput.type = 'password'; // Oculta la contraseña
+                confirmPasswordInput.type = 'password'; // Oculta la confirmación de contraseña
+                document.querySelector('.mostrar').value = 'Mostrar'; // Cambia el texto del botón
+            }
+        }
+
+        // Función para agregar caracteres al campo activo
+        function addCharacter(character) {
+            // Obtiene el campo de entrada activo
+            const activeField = document.getElementById(lastActiveFieldId);
+            // Verifica si el campo está presente
+            if (activeField) {
+                // Verifica el tipo de caracter
+                if (character === 'borrarCaracter') {
+                    activeField.value = activeField.value.slice(0, -1); // Elimina el último carácter
+                } else {
+                    activeField.value += character; // Agrega el carácter al campo
+                }
+            }
+        }
+
+        // Función para validar el formulario
+        function validateForm() {
+            // Obtiene los valores de los campos
+            const nameInput = document.getElementById('name').value;
+            const emailInput = document.getElementById('email').value;
+            const passwordInput = document.getElementById('password').value;
+            const confirmPasswordInput = document.getElementById('confirmarContraseña').value;
+            let isValid = true; // Bandera de validación
+
+            // Limpia los mensajes de error
+            document.getElementById('name-error').innerText = '';
+            document.getElementById('email-error').innerText = '';
+            document.getElementById('password-error').innerText = '';
+            document.getElementById('confirmarContraseña-error').innerText = '';
+            // Dentro de la función validateForm()
+            if (isValid) {
+                const successMessage = document.getElementById('success-message');
+                successMessage.style.display = 'block'; // Muestra el mensaje de éxito
+                document.getElementById('registration-form').reset(); // Reinicia el formulario
+                return false; // Evita que el formulario se envíe
+            }
+
+
+            // Validación de campos requeridos
+            if (nameInput === '') {
+                document.getElementById('name-error').innerText = 'Por favor, ingresa tu nombre de usuario.';
+                isValid = false;
+            }
+
+            if (emailInput === '') {
+                document.getElementById('email-error').innerText = 'Por favor, ingresa tu correo electrónico.';
+                isValid = false;
+            }
+
+            if (passwordInput === '') {
+                document.getElementById('password-error').innerText = 'Por favor, ingresa tu contraseña.';
+                isValid = false;
+            }
+
+            if (confirmPasswordInput === '') {
+                document.getElementById('confirmarContraseña-error').innerText = 'Por favor, confirma tu contraseña.';
+                isValid = false;
+            }
+
+            // Validación de formato de correo electrónico
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(emailInput) && emailInput !== '') {
+                document.getElementById('email-error').innerText = 'Por favor, ingresa un correo electrónico válido.';
+                isValid = false;
+            }
+
+            // Validación de coincidencia de contraseñas
+            if (passwordInput !== confirmPasswordInput) {
+                document.getElementById('password-error').innerText = 'Las contraseñas no coinciden.';
+                document.getElementById('confirmarContraseña-error').innerText = 'Las contraseñas no coinciden.';
+                isValid = false;
+            }
+
+            // Devuelve el resultado de la validación
+            if (isValid) {
+                console.log('¡Formulario validado correctamente! Enviando...');
+                return true;
+            } else {
+                console.log('Por favor, corrige los errores en el formulario.');
+                return false;
+            }
+        }
+    </script>
+</body>
+
+</html>

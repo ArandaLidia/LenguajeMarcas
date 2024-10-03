@@ -1,0 +1,70 @@
+/* Estilos para el cuerpo de la página */
+body {
+    font-family: Arial, sans-serif; /* Fuente de texto */
+    background-color: white; /* Color de fondo */
+    margin: 0; /* Elimina los márgenes predeterminados */
+    padding: 0; /* Elimina el relleno predeterminado */
+    display: flex; /* Utiliza el modelo de caja flexible */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 100vh; /* Altura del cuerpo de la página */
+}
+
+/* Estilos para el contenedor de inicio de sesión */
+.login-container {
+    background-color: #fff; /* Color de fondo */
+    padding: 20px; /* Relleno interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    text-align: center; /* Alineación del texto */
+    width: 25%;
+}
+
+/* Estilos para el título del formulario de inicio de sesión */
+.login-container h1 {
+    font-size: 24px; /* Tamaño de la fuente */
+    margin-bottom: 20px; /* Margen inferior */
+    font-weight: bold; /* Texto en negrita */
+    text-align: center; /* Alineación del texto */
+}
+
+/* Estilos para el formulario de inicio de sesión */
+.login-container form {
+    margin-top: 20px; /* Margen superior */
+    text-align: left; /* Alineación del texto */
+}
+
+/* Estilos para las etiquetas del formulario */
+.login-container label {
+    display: block; /* Muestra como bloque */
+    margin-bottom: 10px; /* Margen inferior */
+    font-weight: bold; /* Texto en negrita */
+    text-align: left; /* Alineación del texto */
+}
+
+/* Estilos para los campos de entrada del formulario */
+.login-container input[type="email"],
+.login-container input[type="password"],
+.login-container input[type="submit"] {
+    width: 100%; /* Ancho completo */
+    padding: 10px; /* Relleno interno */
+    margin-bottom: 15px; /* Margen inferior */
+    border: 1px solid #ccc; /* Borde */
+    border-radius: 5px; /* Bordes redondeados */
+    box-sizing: border-box; /* Incluye el relleno y el borde en el ancho */
+}
+
+/* Estilos para el botón de inicio de sesión */
+.boton-verde {
+    background-color: #4CAF50; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambio de cursor */
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+/* Estilos para el botón de inicio de sesión al pasar el mouse */
+.boton-verde:hover {
+    background-color: #45a049; /* Cambio de color de fondo */
+}

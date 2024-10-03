@@ -1,0 +1,26 @@
+/* Estilos para los elementos li */
+li:hover {
+    background-color: rgb(59, 59, 59);
+    border-bottom: 5px solid #000000;
+}
+
+li {
+    font-variant: sm;
+    background-color: black;
+    list-style-type: none; /* Quitar los marcadores de lista */
+    display: inline;
+    cursor: pointer;
+    font-family: Arial, sans-serif; /* Utilizar la fuente Arial */
+    color: white; /* Color de texto blanco */
+    padding: 15px 20px; /* Ajustar el relleno para hacer el botón más alto */
+}
+ul li a {
+    text-decoration: none; /* Elimina el subrayado */
+    color: rgb(255, 255, 255); /* Cambia el color del texto a negro */
+    background-color: #000000;
+  }
+  div {
+    background-color: #000000;
+    padding: 5px 20px; /* Ajustar el relleno para hacer el botón más alto */
+
+  }

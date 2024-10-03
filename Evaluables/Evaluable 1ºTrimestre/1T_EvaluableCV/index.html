@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Curriculum en línea</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="stilos.css" rel="stylesheet" type="text/css"/>
+        <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+        <link rel="shortcut icon" href="portada.jpg" type="image/x-icon">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&display=swap" rel="stylesheet"><!-- Para agregar una fuente: Open Sans -->
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    </head>
+
+    <body>
+        <header id="header"> <!-- Cabecera del documento -->
+            <nav>
+                <a href="#header">Inicio</a>
+                <a href="#datospersonales">Datos Personales</a>
+                <a href="#datosacademicos">Datos Académicos</a>
+                <a href="#datosprofesionales">Datos profesionales</a> 
+                <a href="#contactodeemergencia">Contacto de Emergencia</a>                
+            </nav>
+            <section class="textos-header"> <!-- section se usa para crear una seccion en pagina web en pagina web, class es para crear una clase dentro de un contenedor. En las clases se aplican estilos -->
+                <h1>Crea tu curriculum Vitae en línea</h1> <!-- Equiqueta de encabezado. Tamaño titulo -->
+                <h2>Tu curriculum profesional</h2><!-- Etiqueta para subtitulos o subsecciones. Se coloca debajo de h1. -->
+            </section>
+            <div style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M-2.82,98.20 C391.91,148.53 352.98,-49.98 516.91,14.31 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #ffff;"></path></svg></div>
+            <!-- div es para crear un contenedor o división, en este contenedor hemos puesto una onda, predefinida de la pagina ->https://smooth.ie/blogs/news/svg-wavey-transitions-between-sections  -->
+            <!-- creamos dentro de div, una clase llamada "wave", para luego poder meter estilos de diseño en css -->
+        </header>
+        <main><!-- Con esta etiqueta, empieza el contenido principal de una pagina web. Solo puede haber un elemento main. -->
+            <form action="pagina2.html" ><!-- form action= -> Manda formulario a Base de Datos -->
+                <section class="contenedor datos-personales"> </section> <!-- Una nueva sección en la pagina con una clase, para poder despues aplicarle diseño. -->
+                <fieldset>
+                    <legend><h2 class="titulo" id="datospersonales">Datos Personales</h2></legend> <!-- Subtitulo, que pertenece a la clase titulo, para escribir la seccion Datos personales. -->
+                    <div class="contenedor-datos-personales"> <!-- Contenedor para datos personales -->
+                        <img src="6.svg" alt="" class="imagen-datos-personales"/> <!-- Insertar imagen, con la ubicación, y una clase para luego meter diseño. -->
+                        <div class="contenido-textos"> <!-- Un nuevo contenedor en nuestra pagina -->
+
+                            <h3>Sobre mí</h3><br> <!-- Tres subtitulos con un parrafo cada uno. -->
+
+                            <label for="nombre">Nombre</label><br><br><!-- Etiqueta y campo para el nombre --><!--  La etiqueta <label> en HTML se utiliza para asociar un texto descriptivo con un elemento de formulario, -->
+                            <input type="text" id="nombre" name="nombre" required ><br><br>
+                            <!-- Atributo 'type' especifica el tipo de entrada (texto) -->
+                            <!-- Atributo 'id' proporciona una identificación única para el campo -->
+                            <!-- Atributo 'name' es el nombre que se enviará con el formulario -->
+                            <!-- Atributo 'required' indica que este campo es obligatorio -->
+                            <!-- La etiqueta <input> es un elemento utilizado para crear controles interactivos en formularios web --> 
+                            <label for="apellido">Primer apellido</label><br>
+                            <input type="text" id="apellido" name="apellido" required size="30"><br><br>
+                            <!-- Etiqueta y campo para el apellido -->
+                            <label for="apellido2">Segundo apellido</label> <label for="opcional" style="color: lightgray;">(Opcional)</label><br>
+                            <input type="text" id="apellido" name="apellido"  size="30"><br><br>
+
+                            <!-- Atributo 'type' especifica el tipo de entrada (texto) -->
+                            <!-- Atributo 'id' proporciona una identificación única para el campo -->
+                            <!-- Atributo 'name' es el nombre que se enviará con el formulario -->
+                            <!-- Atributo 'required' indica que este campo es obligatorio -->
+                            <!-- Atributo 'size' tamaño del espacio para escribir. -->
+                            <!--  La etiqueta <label> en HTML se utiliza para asociar un texto descriptivo con un elemento de formulario, -->
+                            <label for="sexo">Sexo</label> <br>
+                            <input type="radio" name="sexo" id="sexoHombre" required>
+                            <label for="sexoHombre">Hombre</label><br><!-- comment -->
+                            <input type="radio" name="sexo" id="sexoMujer" required>
+                            <label for="sexoMujer">Mujer</label><br><br><!-- comment -->
+
+
+                            <label for="email">Correo Electrónico:</label><br><br>
+                            <input type="email" id="email" name="email" required>
+
+                            <!-- Atributo 'type' especifica el tipo de entrada (texto) -->
+                            <!-- Atributo 'id' proporciona una identificación única para el campo -->
+                            <!-- Atributo 'name' es el nombre que se enviará con el formulario -->
+                            <!-- Atributo 'required' indica que este campo es obligatorio -->
+                            <br>
+                            <label for="idioma"> Idioma preferido </label>        
+                            <select id="idioma" name="idioma" required>  <br><br>
+                                <option value="0"></option>
+                                <option value="1" selected="true">Español</option>
+                                <option value="2">Francés</option>
+                                <option value="3">Inglés</option><br><br>
+                            </select>
+                            <br><br>
+
+                            <label for="start">Fecha de nacimiento</label>
+                            <input type="date" id="start" name="trip-start" value="today" min="1900-01-01" max="2007-12-31" required>
+                            <br><br>
+
+                            <label for="identidad"> Tipo de documento de identidad </label>        
+                            <select id="identidad" name="identidad" required>   
+                                <option value="0"></option>
+                                <option value="1" selected="true">NIF</option>
+                                <option value="2">NIE</option>
+                                <option value="3">Pasaporte</option>
+                                <br><br>
+                            </select>
+                            <br><br>
+                            <input type="text" size="10" id="numidentidad" name="numidentidad" maxlength="9" placeholder="Ejemplo: 12345678A" required><br><br>
+
+                            <h3>Lugar de residencia</h3> <br>
+                            <label for="paisresidencia">País de residencia</label> <br><br>
+                            <div class="dropdown-container">
+                                <!-- Menú desplegable -->
+                                <select id="paisderesidencia" name="paisderesidencia"required>
+                                    <option value="0"></option><option value="86">Afganistán</option><option value="72">Albania</option><option value="1">Alemania</option><option value="2">Andorra</option><option value="84">Angola</option><option value="87">Antigua y Barbuda</option><option value="88">Arabia Saudita</option><option value="89">Argelia</option><option value="3">Argentina</option><option value="90">Armenia</option><option value="59">Australia</option><option value="4">Austria</option><option value="91">Azerbaiyán</option><option value="92">Bahamas</option><option value="94">Bangladés</option><option value="95">Barbados</option><option value="93">Baréin</option><option value="5">Bélgica</option><option value="96">Belice</option><option value="97">Benín</option><option value="210">Bermuda</option><option value="73">Bielorrusia</option><option value="98">Birmania</option><option value="6">Bolivia</option><option value="74">Bosnia-Herzegovina</option><option value="99">Botsuana</option><option value="7">Brasil</option><option value="100">Brunéi</option><option value="8">Bulgaria</option><option value="101">Burkina Faso</option><option value="102">Burundi</option><option value="103">Bután</option><option value="104">Cabo Verde</option><option value="105">Camboya</option><option value="106">Camerún</option><option value="63">Canadá</option><option value="171">Catar</option><option value="108">Chad</option><option value="10">Chile</option><option value="55">China</option><option value="65">Chipre</option><option value="81">Ciudad del Vaticano</option><option value="11">Colombia</option><option value="109">Comoras</option><option value="112">Corea del Norte</option><option value="113">Corea del Sur</option><option value="114">Costa de Marfil</option><option value="12">Costa Rica</option><option value="82">Croacia</option><option value="13">Cuba</option><option value="14">Dinamarca</option><option value="115">Dominica</option><option value="15">Ecuador</option><option value="116">Egipto</option><option value="16">El Salvador</option><option value="117">Emiratos Árabes Unidos</option><option value="118">Eritrea</option><option value="71">Eslovaquia</option><option value="66">Eslovenia</option><option value="17" selected="true">España</option><option value="18">Estados Unidos</option><option value="67">Estonia</option><option value="119">Etiopía</option><option value="120">Filipinas</option><option value="19">Finlandia</option><option value="121">Fiyi</option><option value="20">Francia</option><option value="122">Gabón</option><option value="123">Gambia</option><option value="124">Georgia</option><option value="125">Ghana</option><option value="126">Granada</option><option value="21">Grecia</option><option value="22">Guatemala</option><option value="127">Guinea</option><option value="128">Guinea Ecuatorial</option><option value="129">Guinea-Bissau</option><option value="130">Guyana</option><option value="131">Haití</option><option value="23">Holanda</option><option value="132">Honduras</option><option value="24">Hungría</option><option value="56">India</option><option value="133">Indonesia</option><option value="135">Irak</option><option value="134">Irán</option><option value="49">Irlanda</option><option value="25">Islandia</option><option value="155">Islas Marshall</option><option value="173">Islas Salomón</option><option value="136">Israel</option><option value="26">Italia</option><option value="137">Jamaica</option><option value="27">Japón</option><option value="138">Jordania</option><option value="139">Kazajistán</option><option value="140">Kenia</option><option value="141">Kirguistán</option><option value="142">Kiribati</option><option value="143">Kuwait</option><option value="144">Laos</option><option value="145">Lesoto</option><option value="68">Letonia</option><option value="146">Líbano</option><option value="147">Liberia</option><option value="148">Libia</option><option value="50">Liechtenstein</option><option value="69">Lituania</option><option value="28">Luxemburgo</option><option value="149">Madagascar</option><option value="150">Malasia</option><option value="151">Malaui</option><option value="152">Maldivas</option><option value="153">Malí</option><option value="70">Malta</option><option value="154">Marruecos</option><option value="156">Mauricio</option><option value="157">Mauritania</option><option value="29">México</option><option value="158">Micronesia</option><option value="76">Moldavia</option><option value="77">Monaco</option><option value="159">Mongolia</option><option value="160">Montenegro</option><option value="161">Mozambique</option><option value="162">Namibia</option><option value="163">Nauru</option><option value="164">Nepal</option><option value="30">Nicaragua</option><option value="165">Níger</option><option value="166">Nigeria</option><option value="31">Noruega</option><option value="60">Nueva Zelanda</option><option value="167">Omán</option><option value="32">Otro</option><option value="168">Pakistán</option><option value="169">Palaos</option><option value="33">Panamá</option><option value="170">Papúa Nueva Guinea</option><option value="34">Paraguay</option><option value="35">Perú</option><option value="36">Polonia</option><option value="37">Portugal</option><option value="38">Puerto Rico</option><option value="39">Reino Unido</option><option value="111">Rep. Dem. del Congo</option><option value="107">República Centroafricana</option><option value="9">República Checa</option><option value="75">República de Macedonia</option><option value="110">República del Congo</option><option value="40">Republica Dominicana</option><option value="85">Resto de África</option><option value="57">Resto de Asia</option><option value="51">Resto de Europa</option><option value="53">Resto de Lat.</option><option value="61">Resto de Oceania</option><option value="172">Ruanda</option><option value="41">Rumania</option><option value="42">Rusia</option><option value="174">Samoa</option><option value="175">San Cristóbal y Nieves</option><option value="78">San Marino</option><option value="176">San Vicente y las Granadinas</option><option value="177">Santa Lucía</option><option value="178">Santo Tomé y Príncipe</option><option value="179">Senegal</option><option value="47">Serbia y Montenegro</option><option value="180">Seychelles</option><option value="181">Sierra Leona</option><option value="182">Singapur</option><option value="183">Siria</option><option value="184">Somalia</option><option value="185">Sri Lanka</option><option value="186">Suazilandia</option><option value="187">Sudáfrica</option><option value="188">Sudán</option><option value="189">Sudán del Sur</option><option value="43">Suecia</option><option value="44">Suiza</option><option value="190">Surinam</option><option value="191">Tailandia</option><option value="209">Taiwán</option><option value="192">Tanzania</option><option value="193">Tayikistán</option><option value="194">Timor Oriental</option><option value="195">Togo</option><option value="196">Tonga</option><option value="197">Trinidad y Tobago</option><option value="198">Túnez</option><option value="199">Turkmenistán</option><option value="79">Turquía</option><option value="200">Tuvalu</option><option value="80">Ucrania</option><option value="201">Uganda</option><option value="45">Uruguay</option><option value="202">Uzbekistán</option><option value="203">Vanuatu</option><option value="46">Venezuela</option><option value="204">Vietnam</option><option value="205">Yemen</option><option value="206">Yibuti</option><option value="207">Zambia</option><option value="208">Zimbabue</option>
+                                    <!-- Agrega más opciones según sea necesario -->
+                                </select>
+                            </div>
+                            <br><br>
+
+                            <label for="codigopostal"> Código Postal </label> 
+                            <input type="text" size="2" id="codigopostal" maxlength="5" required name="codigopostal" required><br><br>
+                            <!-- Atributo 'type' especifica el tipo de entrada (texto) -->
+                            <!-- Atributo 'id' proporciona una identificación única para el campo -->
+                            <!-- Atributo 'name' es el nombre que se enviará con el formulario -->
+                            <!-- Atributo 'required' indica que este campo es obligatorio -->
+                            <!-- Atributo 'size' tamaño visual del espacio para escribir -->
+
+
+
+                            <label for="provincia"> Provincia: </label><br><br>
+                            <!--  La etiqueta <label> en HTML se utiliza para asociar un texto descriptivo con un elemento de formulario, -->
+                            <select id="provincia"name="provincia" required=""><br>
+                                <option value=" " selected="(Seleccionar)"> -selecciona- </option>
+                                <option value="02">Albacete</option>
+                                <option value="03">Alicante/Alacant</option>
+                                <option value="04">Almería</option>
+                                <option value="33">Asturias</option>
+                                <option value="05">Ávila</option>
+                                <option value="06">Badajoz</option>
+                                <option value="07">Balears (Illes)</option>
+                                <option value="08">Barcelona</option>
+                                <option value="09">Burgos</option>
+                                <option value="10">Cáceres</option>
+                                <option value="11">Cádiz</option>
+                                <option value="12">Cantabria</option>
+                                <option value="13">Castellón/Castelló</option>
+                                <option value="14">Ceuta</option>
+                                <option value="15">Ciudad Real</option>
+                                <option value="16">Córdoba</option>
+                                <option value="17">Coruña (A)</option>
+                                <option value="18">Cuenca</option>
+                                <option value="19">Girona</option>
+                                <option value="20">Granada</option>
+                                <option value="21">Guadalajara</option>
+                                <option value="22">Guipúzcoa/Gipuzkoa</option>
+                                <option value="23">Huelva</option>
+                                <option value="24">Huesca</option>
+                                <option value="25">Jaén</option>
+                                <option value="26">León</option>
+                                <option value="27">Lugo</option>
+                                <option value="28">Lleida</option>
+                                <option value="29">Madrid</option>
+                                <option value="30">Málaga</option>
+                                <option value="31">Melilla</option>
+                                <option value="32">Murcia</option>
+                                <option value="33">Navarra</option>
+                                <option value="34">Ourense</option>
+                                <option value="35">Palencia</option>
+                                <option value="36">Palmas (Las)</option>
+                                <option value="37">Pontevedra</option>
+                                <option value="38">Rioja (La)</option>
+                                <option value="39">Salamanca</option>
+                                <option value="40">Santa Cruz de Tenerife</option>
+                                <option value="41">Segovia</option>
+                                <option value="42">Sevilla</option>
+                                <option value="43">Soria</option>
+                                <option value="44">Tarragona</option>
+                                <option value="45">Teruel</option>
+                                <option value="46">Toledo</option>
+                                <option value="47">Valencia/València</option>
+                                <option value="48">Valladolid</option>
+                                <option value="49">Vizcaya/Bizkaia</option>
+                                <option value="50">Zamora</option>
+                                <option value="51">Zaragoza</option>
+                            </select> <br>
+
+                            <label for="poblacion"> Población </label> <br><br>
+                            <input type="text" size="30" id="poblacion" name="poblacion" required><br><br>
+                            <!-- Atributo 'type' especifica el tipo de entrada (texto) -->
+                            <!-- Atributo 'id' proporciona una identificación única para el campo -->
+                            <!-- Atributo 'name' es el nombre que se enviará con el formulario -->
+                            <!-- Atributo 'size' tamaño visual del espacio para escribir -->
+
+
+
+                            <label for="calle"> Dirección </label> <label for="opcional" style="color: lightgray;">(Opcional)</label><br><br>
+                            <input type="text" size="50" id="calle" name="calle"/><br><br>
+
+                            <h3>Teléfono de contacto</h3>
+                            <legend><h3> Teléfonos de contacto</h3></legend> <br><!-- comment -->
+                            <label for="telefonomovil"> Teléfono móvil </label> <br>
+                            <input type="tel" size="6" id="telefonomovil" name="telefonomovil" pattern="[6-7]{1}[0-9]{8}"required><br><br>
+                            <label for="telefonofijo"> Teléfono fijo </label> <label for="opcional" style="color: lightgray;">(Opcional)</label><br>
+                            <input type="tel" size="6" id="telefonofijo" name="telefonofijo" minlength="9"  maxlength="9"><br><br>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend><h2 class="titulo" id="datosacademicos">Datos Académicos</h2></legend> <!-- Subtitulo, que pertenece a la clase titulo, para escribir la seccion Datos academicos. -->
+                    <div class="contenedor-datos-academicos"> <!-- Contenedor para datos personales -->
+                        <img src="5.svg" alt="" class="imagen-datos-academicos"/> <!-- Insertar imagen, con la ubicación, y una clase para luego meter diseño. -->
+                        <div class="contenido-academico"> <!-- Un nuevo contenedor en nuestra pagina -->
+
+                            <h3>Formación Académica</h3><br> <!-- Tres subtitulos con un parrafo cada uno. -->
+                            <label>Inserta tus estudios finalizados</label><br><br> 
+                            <textarea class="textarea"cols="70" rows="10"></textarea></p><!-- comment --> 
+                            <h3>Formación complementaria</h3> 
+                            <textarea class="textarea"cols="70" rows="10"></textarea></p><!-- comment --> 
+                            <h3>Idiomas</h3>
+                            <textarea class="textarea"cols="70" rows="10"></textarea></p><!-- comment --> 
+                        </div>
+                    </div>
+                </fieldset>  
+                <fieldset>
+                    <legend><h2 class="titulo" id="datosprofesionales">Datos Profesionales</h2></legend> <!-- Subtitulo, que pertenece a la clase titulo, para escribir la seccion Datos profesionales. -->
+                    <div class="contenedor-datos-profesionales"> <!-- Contenedor para datos personales -->
+                        <div class="contenido-profesional"> <!-- Un nuevo contenedor en nuestra pagina -->
+
+                            <h3>Experiencia laboral</h3> <!-- Un subtitulo con un parrafo -->
+                            <label>Inserta tus experiencia laboral</label><br><br> 
+                            <textarea class="textarea"cols="70" rows="10"></textarea></p><!-- comment --> 
+
+                        </div>
+                        <img src="4.svg" alt="" class="imagen-datos-profesionales"/> <!-- Insertar imagen, con la ubicación, y una clase para luego meter diseño. -->
+
+                    </div>
+                </fieldset>
+                <fieldset> <!-- Inicio de un conjunto de campos -->
+                    <legend><h2 class="titulo" id="contactodeemergencia">Contacto de emergencia</h2></legend>
+                    <!-- La etiqueta <legend> establece el título del campo -->
+                    <!-- Se utiliza un encabezado de segundo nivel <h2> con la clase 'titulo' para dar estilo -->
+                    <!-- El atributo 'id="contactodeemergencia"' proporciona una identificación única para este título -->
+
+                    <div class="contenedor-datos-contacto">
+                        <!-- Contenedor para los datos de contacto de emergencia -->
+                        <img src="8.svg" alt="" class="imagen-datos-personales"/>
+                        <!-- Imagen relacionada con el contacto de emergencia -->
+
+                        <div class="contenido-contacto">
+                            <!-- Contenedor para la información del contacto de emergencia -->
+
+                            <h3>Información contacto emergencia</h3>
+                            <!-- Encabezado de tercer nivel para la sección de información de emergencia -->
+
+                            <!-- Etiquetas <label> para describir cada campo de entrada -->
+                            <label for="nombreemergencia">Nombre de contacto de emergencia</label>
+                            <input type="text" size="23" id="nombreemergencia" name="nombreemergencia" required><br><br>
+                            <!-- Campo de entrada de texto para el nombre del contacto de emergencia -->
+
+                            <label for="telefonoemergencia">Teléfono de contacto de emergencia</label>
+                            <input type="tel" size="23" id="telefonoemergencia" name="telefonoemergencia" maxlength="9" required><br><br>
+                            <!-- Campo de entrada de teléfono para el contacto de emergencia -->
+
+                            <label for="relacion">Relación con el contacto de emergencia</label>
+                            <input type="text" size="20" id="relacion" name="relacion" required><br><br>
+                            <!-- Campo de entrada de texto para la relación con el contacto de emergencia -->
+                        </div>
+                    </div>
+                </fieldset> <!-- Fin del conjunto de campos -->
+                <fieldset>
+                    <!-- Etiqueta para agrupar elementos relacionados en un formulario -->
+
+                    <!-- La etiqueta <legend> define el título del fieldset -->
+                    <legend><h2 class="titulo ">Enviar formulario</h2></legend>
+
+                    <div class="contenedor-enviar-formulario"></div>
+
+                    <!-- Un checkbox para aceptar los términos y condiciones -->
+                    <input type="checkbox" name="condiciones" required/>
+                    Acepto los términos y condiciones.
+                    <!-- Texto que acompaña al checkbox -->
+
+                    <br><br>
+                    <div class="g-recaptcha" data-sitekey="6LfMzhgpAAAAAKwp6pyEcGYhi202ahMjG3fXl1j8" required></div>
+                    <br/>
+                    <input type="submit" value="Guardar cambios" size="15" name="guardardatos" id="guardardatos" value="pagina2.html" >
+                   
+                    <!-- Un botón para enviar el formulario -->
+                    <!-- El valor del botón es "Guardar cambios" -->
+                    <!-- Los atributos "size", "name", y "id" son para el tamaño, nombre y ID del botón, respectivamente -->
+                    <input type="reset" value="Borrar los datos introducidos" size="15" name="borrardatos" id="borrardatos"> 
+                        <!-- Apertura de un formulario -->
+                        <!-- El atributo "action" especifica la página de destino cuando se envíe el formulario -->
+                        <!-- El atributo "method" establece el método de envío, en este caso, POST -->
+                        <!-- El atributo "target" indica que la página se abrirá en una nueva pestaña o ventana -->
+
+                    </form>
+                    <!-- Cierre del formulario -->
+                </fieldset>
+        </main>
+
+    </body>
+
+</html>
+</body>
+</html>
