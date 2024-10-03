@@ -1,0 +1,73 @@
+.header-image {
+  height: 400px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.btn-elegante {
+  background-color: transparent;
+  color: #333;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-family: "Arial", sans-serif;
+  letter-spacing: 1px;
+  border: 2px solid #333;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  text-transform: uppercase;
+}
+
+.btn-elegante:hover {
+  background-color: #333;
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-elegante:active {
+  background-color: #444;
+  color: #fff;
+  transform: scale(0.98);
+}
+
+/* Centrar h1 y otros elementos */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.subtitulo {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+/* Ajustar imagen de cabecera */
+.header-image {
+  width: 100%;
+  height: auto;
+}
+
+/* Ajuste del formulario */
+form {
+  max-width: 600px;
+  margin: auto;
+}
+.header-image {
+  height: 400px;
+  object-fit: cover;
+  width: 100%;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+nav ul li {
+  margin: 0 15px;
+}
+nav ul li a {
+  text-decoration: none;
+  font-size: 18px;
+}

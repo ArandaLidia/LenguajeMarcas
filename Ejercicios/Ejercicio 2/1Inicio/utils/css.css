@@ -1,0 +1,36 @@
+button {
+  background-color: rgb(30, 53, 53) !important;
+  color: white !important;
+  border: rgb(17, 16, 16) !important;
+}
+
+body {
+  background-color: rgb(118, 139, 139);
+}
+
+input.form-control {
+  border: 1px solid rgb(83, 83, 83) !important;
+}
+select {
+  border: 1px solid rgb(83, 83, 83) !important;
+}
+
+header {
+  background-image: url(https://www.wallpapertip.com/wmimgs/79-791985_359059-title-abstract-lines-wallpaper-black-and-grey.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+h1 {
+  padding: 5%;
+  margin: 0;
+  color: rgb(255, 255, 255, 0.7);
+  border-radius: 5px;
+  text-shadow: 2px;
+}

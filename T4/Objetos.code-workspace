@@ -1,0 +1,13 @@
+{
+  "folders": [
+	{
+		"path": "Objetos"
+	},
+	{
+		"path": "../Ejercicios Básicos"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "Ejercicios Básicos"
+  }
+}
